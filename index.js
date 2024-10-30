@@ -1,5 +1,3 @@
-let shiftStartTime;
-
 function getHourlyRate() {
     return parseFloat(document.getElementById('hourlyRate').value);
 }
@@ -22,6 +20,7 @@ function openModal() {
 
 function closeModal() {
     document.getElementById('settingsModal').classList.add('hidden');
+    localStorage.setItem('hourlyRate', getHourlyRate());
 }
 
 function updateEarnings() {
